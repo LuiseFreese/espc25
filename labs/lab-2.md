@@ -89,15 +89,16 @@ We will now take care of the sidebar.
 ![add a gallery](images/powerapps-add-gallery.png)
 
 3. Connect the gallery to your **Trips** data source
-4. Select **Layout** > **Title and subtitle**
-5. Rename it to `gal_TRips`
+4. Select **Layout** > **Title, subtitle and body**
+5. Rename it to `gal_Trips`
 
 ![Power Apps Trips datasource](images/powerapps-trips-datasource.png)
 
 6. Set the **Width** of the gallery to `Parent.Width`
 7. Delete the **NextArrow**
-8. Select the TItle in the gallery and set it to `ThisItem.Title`
-9. Select the Subtitle in the gallery and set it to `ThisItem.Start & " - " & ThisItem.End`. This will concatenate the Start and End Date of the Trip and make it have a `-` in between. 
+8. Select the Title in the gallery and set it to `ThisItem.Title`
+9. Select the Subtitle in the gallery and set it to `ThisItem.Start & " - " & ThisItem.End`. This will concatenate the Start and End Date of the Trip and make it have a `-` in between.
+10. Select the Body in the gallery and set it to `ThisItem.Status.Value` - this will display the value of the Status column.  
 
 You can now press the ALT key on your keyboard down and then select the different trips in the gallery and see the selected one being highlighted in bold text and with the rectangle being displayed
 
@@ -109,11 +110,17 @@ Now lets make sure we also get the trips into the Screen:
 2. Add a gallery, rename it to `gal_Receipts`
 3. Set the **Data source** to **Receipts**
 4. Set layout to **Title and subtitle**
-5. Delete the NextArrow
-6. Set the **Width** of the **gal_Receipt** to `Parent.Width`
-7. Set the **Items** of the **gal_Receipts** to `Filter(Receipts, Trip.Id = gal_Trips.Selected.ID)` - this will make sure that we only get the receipts that are applicable to the selected item in the **gal_Trips**
+5. Set the **Items** of the **gal_Receipts** to `Filter(Receipts, Trip.Id = gal_Trips.Selected.ID)` - this will make sure that we only get the receipts that are applicable to the selected item in the **gal_Trips**
 
-> Ignore the Delegation warning - we will talk about that in a bit
+> Ignore the Delegation warning for now - we will talk about that in a bit
+
+6. Set the **Width** of the **gal_Receipt** to `Parent.Width`
+7. Set the TItle of **galReceipts** to `ThisItem.Title` and the Subtitle to `ThisItem.Amount & " " & ThisItem.Currency`
+8. Delete the NextArrow
+
+Your screen should now look like this:
+
+![after lab 2](images/powerapps-screen-trips-after-lab-2.png)
 
 🎸 You rock! You made it through lab 2! Continue now with [Lab 3](lab-3.md)
 
