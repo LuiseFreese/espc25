@@ -6,8 +6,11 @@
 2. Select **Start with a blank canvas**
 3. Select **Responsive**
 4. Wait a little - maybe its a good idea to take a sip 🥤
-![Create from blank](images/powerapps-create-blank)
+
+![Create from blank](images/powerapps-create-blank.png)
+
 5. You will be welcomed with this screen - Select **Skip**
+
 ![Power Apps Welcome](images/powerapps-welcome.png)
 6. Do the most important step of this tutorial and save your app. Once you did that, auto-save will hit in and your progress will be saved automatically. Name your app `Expenses Tracker`.
 
@@ -54,8 +57,8 @@
 
 ![Sidebar](images/powerapps-sidebar.png) 
 
-1. Rename **Screen2** to **Trips Screen** by selecting the `...` menu > **Rename**
-2. Familiarize youreself with the structure of the screen: 
+3. Rename **Screen2** to **Trips Screen** by selecting the `...` menu > **Rename**
+4. Familiarize youreself with the structure of the screen: 
    - HeaderContainer
    - BottomContainer
      - SidebarContainer
@@ -82,16 +85,19 @@ We will now take care of the sidebar.
 
 1. Select **ctn_Sidebar_Trips**
 2. Select **Insert**, search for `gallery` and select **Vertical gallery**
+
 ![add a gallery](images/powerapps-add-gallery.png)
+
 3. Connect the gallery to your **Trips** data source
 4. Select **Layout** > **Title and subtitle**
 5. Rename it to `gal_TRips`
 
 ![Power Apps Trips datasource](images/powerapps-trips-datasource.png)
-5. Set the **Width** of the gallery to `Parent.Width`
-6. Delete the **NextArrow**
-7. Select the TItle in the gallery and set it to `ThisItem.Title`
-8. Select the Subtitle in the gallery and set it to `ThisItem.Start & " - " & ThisItem.End`. This will concatenate the Start and End Date of the Trip and make it have a `-` in between. 
+
+6. Set the **Width** of the gallery to `Parent.Width`
+7. Delete the **NextArrow**
+8. Select the TItle in the gallery and set it to `ThisItem.Title`
+9. Select the Subtitle in the gallery and set it to `ThisItem.Start & " - " & ThisItem.End`. This will concatenate the Start and End Date of the Trip and make it have a `-` in between. 
 
 You can now press the ALT key on your keyboard down and then select the different trips in the gallery and see the selected one being highlighted in bold text and with the rectangle being displayed
 
