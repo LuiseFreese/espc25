@@ -50,4 +50,4 @@ We still have **Screen1** - this has been auto-generated when we created the app
 13. In the **OnSelect** of the button, put `SubmitForm(frm_addTrip); ResetForm(frm_addTrip); Navigate('Trips Screen')` to submit the form, reset its entries and Navigate back to the Trips Screen.
 14. On the Trips Screen, select the **Add New Trip** button and set its **Onselect** to `Navigate('Add Trips Screen')`
 
-☘️ Whoohoo, you made it through lab 3! If you still have time, you can continue with [lab 4](lab-4.md)!
+☘️ Whoohoo, you made it through lab 3! 
