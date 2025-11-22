@@ -91,5 +91,5 @@ Your **Receipts** list should now look like this:
 1. Open the Trips list and create at least 2 trips
 2. Open the Receipts Lists and create at least two expenses for each trip
 
-🥳 Congrats, you made it through lab 1! [Continue with lab 2](/lab-2.md)
+🥳 Congrats, you made it through lab 1! [Continue with lab 2](lab-2.md)
 

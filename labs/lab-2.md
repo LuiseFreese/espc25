@@ -23,15 +23,19 @@
 1. Navigate to **Data** > **Add data** 
 
 ![add data](images/powerapps-add-data.png)
+
 2. Enter `SharePoint` into the searchbar
 
 ![add SharePoint](images/powerapps-SharePoint.png)
 3. Select **SharePoint**
+
 4. If you do not already have a connection, add a connection by selecting **Add a connection** 
 5. Select **Connect**
 
 ![connect](images/powerapps-connect.png)
+
 6. You can now *either* enter the List URL of your **Trips** and **Receipts** list *or* enter the name of the SharePoint site where your list lives under **Recent Sites** to help find the right list.
+
 7. In the next step, select your **Trips** and *Receipts** lists and select **Connect**
 
 ![connect your lists](images/powerapps-choose-lists.png)
@@ -47,9 +51,11 @@
 ![Power Apps Tree view](images/powerapps-treeview.png)
 
 2.  Select **New Screen** > **Sidebar**
+
 ![Sidebar](images/powerapps-sidebar.png) 
-3. Rename **Screen2** to **Trips Screen** by selecting the `...` menu > **Rename**
-4. Familiarize youreself with the structure of the screen: 
+
+1. Rename **Screen2** to **Trips Screen** by selecting the `...` menu > **Rename**
+2. Familiarize youreself with the structure of the screen: 
    - HeaderContainer
    - BottomContainer
      - SidebarContainer
@@ -67,6 +73,7 @@ Also you can now delete the auto-generated **Screen1**.
 6. Select **Insert** and type into the searchbar `header` and select the **Header** control
 
 ![Insert header control](images/powerapps-header.png)
+
 7. Turn off **Show Logo** in the properties bar
 
 ### Sidebar
