@@ -66,8 +66,6 @@
 
 We rename them to get some consistency - makes it easier later! the **F2** key is your friend!
 
-Also you can now delete the auto-generated **Screen1**.
-
 ![Power Apps Screen Trips](images/powerapps-trips-screen.png)
 
 ### Header

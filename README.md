@@ -41,3 +41,4 @@ This repository will contain labs and presentation of ESPC25 tutorial.
 * [Lab 1: Create SharePoint Lists](/labs/lab-1.md)
 * [Lab 2: Power Apps Trips](/labs/lab-2.md)
 * [Lab 3: Power Apps Receipts](/labs/lab-3.md)
+* [Lab 4: Power AppsFilter](labs/lab-4.md)
