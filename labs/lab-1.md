@@ -1,6 +1,6 @@
 # Lab 1: Create SharePoint Lists with a LookUp Column
 
-*Objective:** Create two SharePoint lists, **Trips** and **Receipts**, and connect them with a lookup column to establish a pseudo-relational data structure.
+**Objective:** Create two SharePoint lists, **Trips** and **Receipts**, and connect them with a lookup column to establish a pseudo-relational data structure.
 
 ## Part A: Creating the **Trips** List
 
@@ -16,7 +16,7 @@
 ![Name the list](images/create-list-name.png)
 
 
-1. **Add Columns to **Trips** List:
+4.  **Add Columns to **Trips** List:
    - **Title Column** (automatically created)
    - **Start**:
      - Select **Add Column** > **Date and Time** 
@@ -26,6 +26,7 @@
      - Select **Save**
 
 ![Create the column](images/create-column-save.png)
+
      - Select **Add Column** > **Date and Time** 
      - Name it **End**
      - (Include time: no)
@@ -36,6 +37,7 @@
      - Name it **Status** and rename the placeholder choices to `Draft`, `Submitted`, `Approved`, `Rejected`. If you like to, you can change the styling of the choices.
      - Set **Default Value** to `Draft`
      - Select **Save**
+
 ![Create the column](images/create-column-choice.png)
 
    - **Approver**:
@@ -77,7 +79,6 @@ Your **Trips** list should now look like this:
      - Under "Get information from," select the **Trips** list
      - Choose **Title** in the column dropdown
      - Select **Save**
-   - **isPresent** > yes/no (default no)
 
 ![create a Lookup column](images/list-lookup.png)
 

@@ -16,9 +16,9 @@
 
 ![save Power Apps](images/powerapps-save.png)
 
-> If you do not hit that button ONCE and close your browser/shut down your laptop everything will be lost. Ask us, how we know 🫣
+> If you do not hit that button ONCE but close your browser/shut down your laptop everything will be lost. Ask us, how we know 🫣
 
-7. Enable modern controls by **Settings** > **Updates**. Now type `modern` into the searchbar and turn the toggle of **Modern controls and themes** **ON**. 
+7. Enable modern controls by **Settings** > **Updates**. Now type `modern` into the search bar and turn the toggle of **Modern controls and themes** **ON**. 
 ![Power Apps modern controls](images/powerapps-modern.png)
 
 ## Get your data into the app
@@ -30,6 +30,7 @@
 2. Enter `SharePoint` into the searchbar
 
 ![add SharePoint](images/powerapps-SharePoint.png)
+
 3. Select **SharePoint**
 
 4. If you do not already have a connection, add a connection by selecting **Add a connection** 
