@@ -19,6 +19,9 @@ We will name the flow `Trip approval` and set the trigger to `When an item is cr
 Hit create and after a short while the resulting flow should look like this.
 ![Placeholder](images/powerapps-container.png)
 
+Select your SharePoint site and the `Trips` list in the trigger action.
+![Placeholder](images/powerapps-container.png)
+
 ## Add a trigger condition
 
 > [!WARNING]
@@ -32,70 +35,64 @@ We can check that programmatically with a trigger condition. Click on the trigge
 @equals(triggerOutputs()?['body/Status/Value'], 'Submitted')
 ```
 
+Make sure to match the exact name of the column of your SharePoint list (here: `Status`) and choice value (here: `Submitted`)!
+
 ## Add the approval workflow
+Click on the **+** to add a new action. Type `Approval` into the search bar and select the action `Start and wait for an approval`.
+![Placeholder](images/powerapps-container.png)
+
+As **Approval type** we will select `Approve/Reject - First to respond`.
+In the **Title** we will write `Approval request for Trip - ` and while having the cursor still in the **Title** field we click on the lightning bolt and select `Title` from the SharePoint list.
+![Placeholder](images/powerapps-container.png)
+
+> [!TIP]
+> It's a fundamental principle in Power Automate to use Output parameters of previous actions in following actions. This will allow us to dynamically populate any input for every action.
+
+For **Assigned to** we have to click on the cog and set the field to `Use dynamic content`. Then we will use the same principle as before and select the `Approver Email` (either use the search bar to search for *Email* or click on *See more* on top to see all the ~50 fields from the trigger)
+![Placeholder](images/powerapps-container.png)
+
+I did create a view on the SharePoint list, that will group the expenses by `Trip: ID`. When setting a filter to the `Trip: ID`, you can see that it will be refelected in the URL. We can create such a filter dynamically by combining the first part of the URL and dynamically adding the `ID` as the **Item Link** of the approval. We also add the `Title` of the Trip as **Item Description**. This will allow the approver to click on the link and review the items in SharePoint.
+![Placeholder](images/powerapps-container.png)
+
+## Test
+
+Our flow is not ready, but it's a good time to save and test our flow for the first time. Hit **Save** and after everything was processed hit **Back**. In a new browser tab add a new entry to your SharePoint **Trips** list and set the **Status** to `Draft` and save the item (either through the SharePoint interface or your newly created Power App). Make sure to set yourself as the approver and then set the **Status** to `Submitted`. This should result in only one flow run that you can check on your flows overview page and you should receive an approval workflow in teams. Answer that workflow by either approving or rejecting.
+
+> [!TIP]
+> If you see two flow runs you forgot to set the trigger condition.
+> If you see no flow run, wait a few more seconds and refresh. If you still see nothing double check that your trigger condition matches the field name and value of your SharePoint list.
+
+![Placeholder](images/powerapps-container.png)
+
+## Add a condition to check on the outcome of the approval
+
+Now we need to add a condition to either set the **Status** of the Trip to `Approved` or `Rejected` and inform the user. Let's check the outputs of the approval action and see which property we can use for the condition. On the test flow run click on the **Approval** action and the on **Show raw outputs**.
+
+In the image we can see, that there is a property called **Outcome** and depending on how you decided it says `Approve` or `Reject`.
+
+![Placeholder](images/powerapps-container.png)
+
+We go back to editing our flow and add the next action. Search for `Condition` and add it to your flow.
+
+Dynamically add `outcome` of the Approval action and select **equal to** `Approve`
+
+![Placeholder](images/powerapps-container.png)
+
+Everytime the Approval is approved, the automation will go to the **True** path. Everytime it is rejected, it will go to the **False** path.
 
 ## Inform the user and set the new status
 
+Finally we need to update the item to the respective status and inform the user in form of an Email about the decision.
 
+To update the item we will add an **Update Item** action from the SharePoint connector and select our SharePoint and our Trips list.
 
+Set the **Id** dynamically to the `ID` from our trigger and set the **Status** to `Approved`.
 
+![Placeholder](images/powerapps-container.png)
 
+Let's finally write an Email to the lucky user that gets reimbursed. Add the **Send an Email (V2)** action from the **Office 365 Outlook** connector. Use the cog to set the input box to `Use dynamic content` and set it to `Created by Email` from our trigger. Find some nice words in the **Subject** and **Body**. Repeat the process for the `Reject` branch and test your flow.
 
+![Placeholder](images/powerapps-container.png)
 
-
-
-## Create new Trips
-
-We now want to allow users to add new trips.
-
-### Insert Add new Trip Button
-
-1. Select **ctn_Sidebar_Trips**
-2. Insert a new button, rename it to `btn_AddTrip`
-   - **Text**: `Add new Trip`
-   - **Icon**: `+`
-   - **Layout**: `Icon Before
-   - **Type**: `Subtle`
-   - **Width**: `140`
-   - **Align in container**: `End`
-3. Move that button to the top: `...` > **Reorder** > **Move to the top**
-
-### Create a new Screen
-
-We still have **Screen1** - this has been auto-generated when we created the app. We can now repurpose this screen for the form to add new trips
-
-1. Rename the **Screen1** to `Add Trips Screen`
-2. Rename the existing containers to this: 
-
-![Power Apps Container](images/powerapps-container.png)
-
-(If you have ideas for the Footer container: Go for it, you also also delete it)
-
-3. Insert a header control into the header container. Style it the way you did with the one on the Trips Screen.
-4. In ctn)Main_AddTrips, add a Form control, rename it to `frm_addTrip` and 
-5. Select **Trips** as the datasource
-6. Set its **Default mode** to `New`
-
-![Form Datasource](images/powerapps-form-datasource.png)
-
-7. Remove the **Content type** and the **Status** field
-
-![Field remove](images/powerapps-form-field-remove.png)
-
-8. Change to **Columns**: `2` Layout
-9. Rightclick the **Approver_Datacard`, select **Unlock**
-10. Select the **DataCardValue** and select **Fields: Edit** in the Property pane > **Add field** > **DisplayName**
-11. Select the **ctn_Main_AddTrips** container and add a Button:
-   - **Text**: `Save`
-   - **Icon**: `Save`
-   - **Type** `Subtle`
-   - **Align in container**: `End`
-12. Now move the button to the top
-13. In the **OnSelect** of the button, put `SubmitForm(frm_addTrip); ResetForm(frm_addTrip); Navigate('Trips Screen')` to submit the form, reset its entries and Navigate back to the Trips Screen.
-14. On the Trips Screen, select the **Add New Trip** button and set its **Onselect** to `Navigate('Add Trips Screen')`
-
-Your Add Trips Screen should look like this:
-
-![Add Trips Screen](images/powerapps-screen_addTrips.png)
-
-☘️ Whoohoo, you made it through lab 3 and with that completed your main quests! If you still have time, you can now work on the Sidequests!
+> [!WARNING]
+> There is an old **Outlook.com** connector that is deprecated. Avoid selecting that one by accident.
