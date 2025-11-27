@@ -8,7 +8,7 @@ We create a new `Scheduled cloud flow` in Power Automate.
 
 ![5_createscheduled.png](images/5_createscheduled.png)
 
-We call it `Approval Reminder` and set it to an early morning time and let it repeat every `1 Day` and hir **Create**. This flow will then run every morning at 7 AM and remind the approvers.
+We call it `Approval Reminder` and set it to an early morning time and let it repeat every `1 Day` and hit **Create**. This flow will then run every morning at 7 AM and remind the approvers.
 
 ![5_createreminder.png](images/5_createreminder.png)
 
@@ -24,7 +24,7 @@ Use this filter query, but make sure to use the exact column name and choice val
 
 ![5_filter.png](images/5_filter.png)
 
-## Write a teams message for every item
+## Write a Teams message for every item
 
 Add the `Post message in a chat or channel` action from the Teams connector and populate the fields. For the **Recipient** we have to select the cog and select `Use dynamic content` before we can input `Approver Email` as value.
 
@@ -34,7 +34,7 @@ Make up a nice message to remind the approver and add that as well.
 
 ## For each loop
 
-You should have noticed, that a **For each** loop was added automatically. This means, that for each item a separate teams message is sent out. In the test screen you can also see the details for every single execution. Because this can take a little longer, when you have multiple items, there is a setting, that allows you to send those in parallel if you want to save time.
+You should have noticed, that a **For each** loop was added automatically. This means, that for each item a separate Teams message is sent out. In the test screen you can also see the details for every single execution. Because this can take a little longer, when you have multiple items, there is a setting, that allows you to send those in parallel if you want to save time.
 
 Click on **Settings**, switch the **Concurrency control** `On` and select how many iterations you want to execute in parallel (up to 50).
 
@@ -64,7 +64,7 @@ Error handling is crucial in Power Automate and you should know how the *try, ca
 
 The scopes you'll use can also help to structure your flow a bit better.
 
-The editor looks a bit different know, but our friend Matthew Devaney has a top notch [article](https://www.matthewdevaney.com/power-automate-coding-standards-for-cloud-flows/power-automate-standards-error-handling/) as part of his [Power Automate Coding Standards](https://www.matthewdevaney.com/power-automate-coding-standards-for-cloud-flows/).
+The editor looks a bit different now, but our friend Matthew Devaney has a top notch [article](https://www.matthewdevaney.com/power-automate-coding-standards-for-cloud-flows/power-automate-standards-error-handling/) as part of his [Power Automate Coding Standards](https://www.matthewdevaney.com/power-automate-coding-standards-for-cloud-flows/).
 
 ### Agent flows in Copilot Studio
 

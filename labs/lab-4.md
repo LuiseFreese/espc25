@@ -1,6 +1,6 @@
 # Send an approval to the approver
 
-In this lab we'll create our first flow that will be triggered when a new trip reaches the status `Submitted`. The trip is then sent to Approval to our selected Approver and can be Accepted or Rejected. That change is then reflected in the SharePoint list.
+In this lab we'll create our first flow that will be triggered when a new trip reaches the status `Submitted`. The trip is then sent for approval to our selected approver and can be accepted or rejected. That change is then reflected in the SharePoint list.
 
 ## Create a new Power Automate flow and select the trigger
 
@@ -64,7 +64,7 @@ For **Assigned to** we have to click on the cog and set the field to `Use dynami
 
 ![4_usedynamiccontent](images/4_usedynamiccontent.png)
 
-I did create a view on the SharePoint list, that will group the expenses by `Trip: ID`. When setting a filter to the `Trip: ID`, you can see that it will be refelected in the URL. We can create such a filter dynamically by combining the first part of the URL and dynamically adding the `ID` as the **Item Link** of the approval. We also add the `Title` of the Trip as **Item Description**. This will allow the approver to click on the link and review the items in SharePoint.
+I did create a view on the SharePoint list, that will group the expenses by `Trip: ID`. When setting a filter to the `Trip: ID`, you can see that it will be reflected in the URL. We can create such a filter dynamically by combining the first part of the URL and dynamically adding the `ID` as the **Item Link** of the approval. We also add the `Title` of the Trip as **Item Description**. This will allow the approver to click on the link and review the items in SharePoint.
 
 My Link looks like this, feel free to create something similar.
 
@@ -97,7 +97,7 @@ Dynamically add `Outcome` of the Approval action and select **equal to** `Approv
 
 ![4_condition.png](images/4_condition.png)
 
-Everytime the Approval is approved, the automation will go to the **True** path. Everytime it is rejected, it will go to the **False** path.
+Every time the approval is approved, the automation will go to the **True** path. Every time it is rejected, it will go to the **False** path.
 
 ## Inform the user and set the new status
 
