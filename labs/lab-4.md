@@ -26,7 +26,7 @@ Select your SharePoint site and the `Trips` list in the trigger action.
 
 ![4_selectsharepoint.png](images/4_selectsharepoint.png)
 
-> [!INFORMATION]
+> [!NOTE]
 > If you are doing this for the first time on this environment, a connection is created that will define that the SharePoint actions used in this flow will run with your credentials. This will happen for every connector we use.
 
 ## Add a trigger condition
@@ -80,7 +80,7 @@ Our flow is not ready, but it's a good time to save and test our flow for the fi
 
 ![4_triptest.png](images/4_triptest.png)
 
-> [!INFORMATION]
+> [!NOTE]
 > You can run subsequent tests for automated flows also from the **Test** button in the editor and simulate the last 5 triggers. This can be convenient, if you don't want to actually recreate the trigger conditions every time.
 
 ## Add a condition to check on the outcome of the approval
@@ -114,7 +114,7 @@ Let's finally write an Email to the lucky user that gets reimbursed. Add the **S
 ![4_response.png](images/4_response.png)
 
 
-> [!INFORMATION]
+> [!NOTE]
 > The approval action could theoretically also have multiple approvers, therefore it could have multiple comments (even though in our case we are 100% sure it's only one approver). That's the reason why the approval comments are inside of an array in the output and a **For each** loop is created automatically. Because we only have 1 comment, we can ignore that for now and look deeper into it in the next lab.
 
 > [!WARNING]
