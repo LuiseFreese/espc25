@@ -1,6 +1,6 @@
 # Getting Started with Power Platform & AI on SharePoint
 
-This repository will contain labs and presentation of ESPC25 tutorial. 
+This repository will contain labs and presentation of our ESPC25 tutorial. 
 
 ## Presenters
 
@@ -47,5 +47,6 @@ This repository will contain labs and presentation of ESPC25 tutorial.
 * [Sidequests](/labs/sidequests.md)
 
 We also provide you with the [yaml code](/labs/code) for the screens - this serves as a reference - you can also copy yaml snippets (even an entire screen) [and paste that into Power Apps Studio](https://learn.microsoft.com/power-apps/maker/canvas-apps/code-view)!
+
 
 
