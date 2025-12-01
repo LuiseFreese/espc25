@@ -49,4 +49,8 @@ This repository will contain labs and presentation of our ESPC25 tutorial.
 We also provide you with the [yaml code](/labs/code) for the screens - this serves as a reference - you can also copy yaml snippets (even an entire screen) [and paste that into Power Apps Studio](https://learn.microsoft.com/power-apps/maker/canvas-apps/code-view)!
 
 
+## Resources
 
+
+* [Matthew Devaney's post on people piker workaround](https://www.matthewdevaney.com/power-apps-people-picker-delegation-workaround/)
+* 
