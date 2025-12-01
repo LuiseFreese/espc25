@@ -26,6 +26,12 @@ Hints for creating a filter experience
 - The `Filter()` function is your friend, use it in the gallery to show only records of the Trips list, where the Status columns value is the same as the selected value of the Dropdown control.
 - You can put containers inside of containers for placing your dropdown next to the Add new trip button
 
+3. Use AI Prompts to automatically extract document information
+
+In this video Robin explains in German (turn on translated subtitles) how to set up an AI Prompt and use it in Power Apps.
+
+(📹 Video)[https://www.youtube.com/watch?v=h4CNQ-UGk4g]
+
 ## Power Automate
 
 It would be very convenient for the approver to get a direct link in the approval flow. Store the Approval ID in an extra column in the `Trips` list and create a hyperlink in the teams message.
