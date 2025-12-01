@@ -30,7 +30,7 @@ Hints for creating a filter experience
 
 In this video Robin explains in German (turn on translated subtitles) how to set up an AI Prompt and use it in Power Apps.
 
-(📹 Video)[https://www.youtube.com/watch?v=h4CNQ-UGk4g]
+[📹 Video](https://www.youtube.com/watch?v=h4CNQ-UGk4g)
 
 ## Power Automate
 

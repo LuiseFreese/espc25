@@ -53,4 +53,4 @@ We also provide you with the [yaml code](/labs/code) for the screens - this serv
 
 
 * [Matthew Devaney's post on people piker workaround](https://www.matthewdevaney.com/power-apps-people-picker-delegation-workaround/)
-* 
+
