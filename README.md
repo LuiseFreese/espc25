@@ -8,6 +8,11 @@ This repository will contain labs and presentation of our ESPC25 tutorial.
 * [Robin Rosengruen](https://www.linkedin.com/in/robinrosengruen/), Solution Engineer Power Platform, Microsoft. [YouTube](https://www.youtube.com/channel/UCAYTr-CNtPd8SZhC0bci9pw/about)
 
 
+## IMPORTANT
+
+If you liked this tutorial please do rate it after the conference - We love to be here and would also like to return next year! 💖🎤💯
+
+
 ## Agenda
 
 * Introduction
