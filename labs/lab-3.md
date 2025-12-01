@@ -28,7 +28,7 @@ We still have **Screen1** - this has been auto-generated when we created the app
 (If you have ideas for the Footer container: Go for it, you also also delete it)
 
 3. Insert a header control into the header container. Style it the way you did with the one on the Trips Screen.
-4. In ctn)Main_AddTrips, add a Form control, rename it to `frm_addTrip` and 
+4. In ctn_Main_AddTrips, add a Form control, rename it to `frm_addTrip` and 
 5. Select **Trips** as the datasource
 6. Set its **Default mode** to `New`
 
@@ -53,5 +53,8 @@ We still have **Screen1** - this has been auto-generated when we created the app
 Your Add Trips Screen should look like this:
 
 ![Add Trips Screen](images/powerapps-screen_addTrips.png)
+
+> [!NOTE]
+> We have talked about the missing functionality in the prople picker to access your whole company. Matthew Devaney has an [excellent article](https://www.matthewdevaney.com/power-apps-people-picker-delegation-workaround/).
 
 ☘️ Whoohoo, you made it through lab 3 and with that completed your main quests! If you still have time, you can now work on the Sidequests!
